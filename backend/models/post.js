@@ -1,5 +1,3 @@
-const Category = require("./category");
-
 //Post Model ID, TITLE, CONTENT, IMAGE, CATEGORY, CREATIONDATE.
 
 module.exports = (sequelize, type) => {
@@ -20,10 +18,10 @@ module.exports = (sequelize, type) => {
     image: {
       type: type.STRING,
     },
-    category: {
+    categoryId: {
       type: type.INTEGER,
       references: {
-        model: Category,
+        model: "categories",
         key: "id",
       },
     },

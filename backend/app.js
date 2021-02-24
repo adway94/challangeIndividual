@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-//const apiRoutes = require("./routes/apiRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 
 const { urlencoded } = require("body-parser");
 const port = process.env.PORT ? process.env.PORT : 3000;
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 // Agregamos rutas API
-//app.use(apiRoutes);
+app.use(apiRoutes);
 
 // Escucha puerto
 app.listen(port, () => {

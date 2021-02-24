@@ -10,7 +10,6 @@ const sequelize = new Sequelize("blog", "root", "", {
 
 const Post = PostModel(sequelize, Sequelize);
 const Category = CategoryModel(sequelize, Sequelize);
-Post.hasOne(Category);
 
 sequelize.sync({ force: false }).then(() => {
   console.log("Im working");
